@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4n#)@)w9h0pxl%4gudquze432yjk+kx(4hp*!fliy#@(2siv41
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -74,23 +74,23 @@ WSGI_APPLICATION = 'ecommerceproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ecommerce',
-        'USER': 'root',
-        'PASSWORD': '@Yashi1234',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+     }
+ }
+
+#DATABASES = {
+ #   'default': {
+ #      'ENGINE': 'django.db.backends.mysql',
+ #     'NAME': 'ecommerce',
+ #    'USER': 'root',
+ #   'PASSWORD': '@Yashi1234',
+ #       'HOST': 'localhost',
+ #      'PORT': '3306',
+ #  }
+#}
 
 
 # Password validation
