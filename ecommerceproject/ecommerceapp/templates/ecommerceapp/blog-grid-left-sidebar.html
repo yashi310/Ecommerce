@@ -98,7 +98,7 @@
                             <!-- Logo Start -->
                             <div class="col-md-2 col-sm-2">
                                 <div class="logo">
-                                    <a href={% url 'index' %}><img src="assets/images/logo/logo.jpg" alt="" /></a>
+                                    <a href={% url 'index' %}><img src="{% static 'ecommerceapp/images/logo/logo.jpg' %}" alt="" /></a>
                                 </div>
                             </div>
                             <!-- Logo End -->
@@ -128,7 +128,7 @@
                                                 </ul>
                                             </li>
                                             <li class="menu-dropdown">
-                                                <a href="shop-left-sidebar.html">Shop</a>
+                                                <a href="{% url 'shopleft' %}">Shop</a>
                                             </li>
                                             <li class="menu-dropdown">
                                                 <a href="#">Pages <i class="ion-ios-arrow-down"></i></a>
@@ -143,7 +143,7 @@
                                                 </ul>
                                             </li>
                                             <li class="menu-dropdown">
-                                                <a href='blog-grid-left-sidebar.html'>Blog </a>
+                                                <a href="{% url 'bloggrid' %}">Blog </a>
                                             </li>
                                             <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                         </ul>
@@ -258,7 +258,7 @@
                                                 <ul>
                                                     <li class="single-shopping-cart">
                                                         <div class="shopping-cart-img">
-                                                            <a href="{% url 'singleproduct' %}"><img alt="" src="assets/images/product-image/mini-cart/1.jpg" /></a>
+                                                            <a href="{% url 'singleproduct' %}"><img alt="" src="{% static 'ecommerceapp/images/product-image/mini-cart/1.jpg' %}" /></a>
                                                             <span class="product-quantity">1x</span>
                                                         </div>
                                                         <div class="shopping-cart-title">
@@ -271,7 +271,7 @@
                                                     </li>
                                                     <li class="single-shopping-cart">
                                                         <div class="shopping-cart-img">
-                                                            <a href="{% url 'singleproduct' %}"><img alt="" src="assets/images/product-image/mini-cart/2.jpg" /></a>
+                                                            <a href="{% url 'singleproduct' %}"><img alt="" src="{% static 'ecommerceapp/images/product-image/mini-cart/2.jpg' %}" /></a>
                                                             <span class="product-quantity">1x</span>
                                                         </div>
                                                         <div class="shopping-cart-title">
@@ -341,7 +341,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="blog-grid-left-sidebar.html">Blog</a>
+                                            <a href="{% url 'bloggrid' %}">Blog</a>
                                         </li>
                                         <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                     </ul>
@@ -398,7 +398,7 @@
                                                 <p>
                                                     Breakfast is often called 'the most important meal of the day', and for good reason. As the name suggests, breakfast breaks the overnight fasting period. It replenishes your supply of glucose to boost your energy levels and alertness, while also providing other essential nutrients required for good health.
                                                 </p>
-                                                <a class="read-more-btn" href="blog-single-left-sidebar.html"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
+                                                <a class="read-more-btn" href={% url 'blogsingle' %}> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
                                             </div>
                                         </div>
                                         <!-- single blog post -->
@@ -408,13 +408,13 @@
                                             <div class="blog-post-media">
                                                 <div class="blog-gallery">
                                                     <div class="gallery-item">
-                                                        <a href="#"><img src="{% static 'ecommerceproject/images/blog-image/blog-2.jpg' %}" alt="blog" /></a>
+                                                        <a href="#"><img src="{% static 'ecommerceapp/images/blog-image/blog-2.jpg' %}" alt="blog" /></a>
                                                     </div>
                                                     <div class="gallery-item">
-                                                        <a href="#"><img src="{% static 'ecommerceproject/images/blog-image/blog-3.jpg' %}" alt="blog" /></a>
+                                                        <a href="#"><img src="{% static 'ecommerceapp/images/blog-image/blog-3.jpg' %}" alt="blog" /></a>
                                                     </div>
                                                     <div class="gallery-item">
-                                                        <a href="#"><img src="{% static 'ecommerceproject/images/blog-image/blog-4.jpg' %}" alt="blog" /></a>
+                                                        <a href="#"><img src="{% static 'ecommerceapp/images/blog-image/blog-4.jpg' %}" alt="blog" /></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -431,7 +431,7 @@
                                                 <p>
                                                     A healthy diet helps to protect against malnutrition in all its forms, as well as noncommunicable diseases (NCDs), including such as diabetes, heart disease, stroke and cancer. Unhealthy diet and lack of physical activity are leading global risks to health.
                                                 </p>
-                                                <a class="read-more-btn" href="{% url 'bloggrid' %}"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
+                                                <a class="read-more-btn" href="{% url 'blogsingle' %}"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
                                             </div>
                                         </div>
                                         <!-- single blog post -->
@@ -462,7 +462,7 @@
                                                 <p>
                                                     Technolife Software Private Limited is a Private incorporated on 10 September 2014. It is classified as Non-govt company and is registered at Registrar of Companies, Kolkata. Its authorized share capital is Rs. 500,000 and its paid up capital is Rs. 100,000. It is inolved in Data processing. 
                                                 </p>
-                                                <a class="read-more-btn" href="{% url 'bloggrid' %}"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
+                                                <a class="read-more-btn" href="{% url 'blogsingle' %}"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
                                             </div>
                                         </div>
                                         <!-- single blog post -->
@@ -488,7 +488,7 @@
                                                 <p>
                                                     the movable articles that are used to make a room or building suitable for living or working in, such as tables, chairs, or desks.
                                                 </p>
-                                                <a class="read-more-btn" href="blog-single-left-sidebar.html"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
+                                                <a class="read-more-btn" href="{% url 'blogsingle' %}"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
                                             </div>
                                         </div>
                                         <!-- single blog post -->
@@ -497,7 +497,7 @@
                                         <div class="single-blog-post blog-grid-post mt-30">
                                             <div class="blog-post-media">
                                                 <div class="blog-image">
-                                                    <a href="#"><img src="assets/images/blog-image/blog-3.jpg" alt="blog" /></a>
+                                                    <a href="#"><img src="{% static 'ecommerceapp/images/blog-image/blog-3.jpg' %} alt="blog" /></a>
                                                 </div>
                                             </div>
                                             <div class="blog-post-content-inner mt-30">
@@ -515,7 +515,7 @@
 
 At least nine different families of fruits and vegetables exist, each with potentially hundreds of different plant compounds that are beneficial to health. Eat a variety of types and colors of produce in order to give your body the mix of nutrients it needs. This not only ensures a greater diversity of beneficial plant chemicals but also creates eye-appealing meals.
                                                 </p>
-                                                <a class="read-more-btn" href="blog-single-left-sidebar.html"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
+                                                <a class="read-more-btn" href="{% url 'blogsingle' %}"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
                                             </div>
                                         </div>
                                         <!-- single blog post -->
@@ -524,7 +524,7 @@ At least nine different families of fruits and vegetables exist, each with poten
                                         <div class="single-blog-post blog-grid-post mt-30">
                                             <div class="blog-post-media">
                                                 <div class="blog-image">
-                                                    <a href="#"><img src="assets/images/blog-image/blog-4.jpg" alt="blog" /></a>
+                                                    <a href="#"><img src="{% static 'ecommerceapp/images/blog-image/blog-4.jpg' %} alt="blog" /></a>
                                                 </div>
                                             </div>
                                             <div class="blog-post-content-inner mt-30">
@@ -540,7 +540,7 @@ At least nine different families of fruits and vegetables exist, each with poten
                                                 <p>
                                                     Protein is a macronutrient that is essential to building muscle mass. It is commonly found in animal products, though is also present in other sources, such as nuts and legumes. There are three macronutrients: protein, fats and carbohydrates. Macronutrients provide calories, or energy.
                                                 </p>
-                                                <a class="read-more-btn" href="blog-single-left-sidebar.html"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
+                                                <a class="read-more-btn" href="{% url 'blogsingle' %}"> Read More <i class="ion-android-arrow-dropright-circle"></i></a>
                                             </div>
                                         </div>
                                         <!-- single blog post -->
@@ -603,7 +603,7 @@ At least nine different families of fruits and vegetables exist, each with poten
                                     <div class="recent-post-widget">
                                         <div class="recent-single-post d-flex">
                                             <div class="thumb-side">
-                                                <a href="#"><img src="assets/images/blog-image/blog-1.jpg" alt="" /></a>
+                                                <a href="#"><img src="{% static 'ecommerceapp/images/blog-image/blog-1.jpg' %}" alt="" /></a>
                                             </div>
                                             <div class="media-side">
                                                 <h5><a href="#">This Is First Post For XipBlog </a></h5>
@@ -612,7 +612,7 @@ At least nine different families of fruits and vegetables exist, each with poten
                                         </div>
                                         <div class="recent-single-post d-flex">
                                             <div class="thumb-side">
-                                                <a href="#"><img src="assets/images/blog-image/blog-2.jpg" alt="" /></a>
+                                                <a href="#"><img src="{% static 'ecommerceapp/images/blog-image/blog-2.jpg' %}" alt="" /></a>
                                             </div>
                                             <div class="media-side">
                                                 <h5><a href="#">This Is Secound Post For XipBlog </a></h5>
@@ -621,7 +621,7 @@ At least nine different families of fruits and vegetables exist, each with poten
                                         </div>
                                         <div class="recent-single-post d-flex">
                                             <div class="thumb-side">
-                                                <a href="#"><img src="assets/images/blog-image/blog-3.jpg" alt="" /></a>
+                                                <a href="#"><img src="{% static 'ecommerceapp/images/blog-image/blog-3.jpg' %}" alt="" /></a>
                                             </div>
                                             <div class="media-side">
                                                 <h5><a href="#">This Is Third Post For XipBlog </a></h5>
@@ -630,7 +630,7 @@ At least nine different families of fruits and vegetables exist, each with poten
                                         </div>
                                         <div class="recent-single-post d-flex">
                                             <div class="thumb-side m-0px">
-                                                <a href="#"><img src="assets/images/blog-image/blog-4.jpg" alt="" /></a>
+                                                <a href="#"><img src="{% static 'ecommerceapp/images/blog-image/blog-4.jpg' %}" alt="" /></a>
                                             </div>
                                             <div class="media-side">
                                                 <h5><a href="#">This Is Fourth Post For XipBlog </a></h5>
