@@ -11,7 +11,7 @@ def bloggrid(request):
 	return render(request,'ecommerceapp/blog-grid-left-sidebar.html')
 
 def blogsingle(request):
-	return render(request,'ecommerceapp/blog-single-left-sidebar.html')
+	return render(request,'ecommerceapp/blod-single-left-sidebar.html')
 
 def cart(request):
 	return render(request,'ecommerceapp/cart.html')
