@@ -1,190 +1,190 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from htmldemo.hasthemes.com/ecolife-preview/ecolife/compare.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Jun 2021 16:18:17 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<!-- /Added by HTTrack -->
-
+    
+<!-- Mirrored from htmldemo.hasthemes.com/ecolife-preview/ecolife/wishlist.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Jun 2021 16:18:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Ecolife - Multipurpose eCommerce HTML Template</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.png" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Ecolife - My Wishlist</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.png" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&amp;display=swap" rel="stylesheet" />
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&amp;display=swap" rel="stylesheet" />
 
-    <!-- All CSS Flies   -->
-    <!--===== Vendor CSS (Bootstrap & Icon Font) =====-->
-    <!-- <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+        <!-- All CSS Flies   -->
+        <!--===== Vendor CSS (Bootstrap & Icon Font) =====-->
+        <!-- <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/plugins/font-awesome.min.css" />
         <link rel="stylesheet" href="assets/css/plugins/ionicons.min.css" /> -->
-    <!--===== Plugins CSS (All Plugins Files) =====-->
-    <!-- <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
+        <!--===== Plugins CSS (All Plugins Files) =====-->
+        <!-- <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
         <link rel="stylesheet" href="assets/css/plugins/meanmenu.css" />
         <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
         <link rel="stylesheet" href="assets/css/plugins/owl-carousel.css" />
         <link rel="stylesheet" href="assets/css/plugins/slick.css" /> -->
-    <!--===== Main Css Files =====-->
-    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
-    <!-- ===== Responsive Css Files ===== -->
-    <!-- <link rel="stylesheet" href="assets/css/responsive.css" /> -->
+        <!--===== Main Css Files =====-->
+        <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
+        <!-- ===== Responsive Css Files ===== -->
+        <!-- <link rel="stylesheet" href="assets/css/responsive.css" /> -->
 
-    <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
+        <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
 
-    <link rel="stylesheet" href=="{% static 'ecommerceapp/css/vendor/plugins.min.css'  %}">
-    <link rel="stylesheet" href="{% static 'ecommerceapp/css/style.min.css' %}">">
-    <link rel="stylesheet" href="{% static 'ecommerceapp/css/responsive.min.css' %}">
-</head>
+         <link rel="stylesheet" href="{% static 'ecommerceapp/css/vendor/plugins.min.css' %}">
+        <link rel="stylesheet" href="{% static 'ecommerceapp/css/style.min.css' %}">
+        <link rel="stylesheet" href="{% static 'ecommerceapp/css/responsive.min.css' %}">
+    </head>
+    <body>
+        <!-- main layout start from here -->
+        <!--====== PRELOADER PART START ======-->
 
-<body>
-    <!-- main layout start from here -->
-    <!--====== PRELOADER PART START ======-->
-
-    <!-- <div id="preloader">
+        <!-- <div id="preloader">
         <div class="preloader">
             <span></span>
             <span></span>
         </div>
     </div> -->
 
-    <!--====== PRELOADER PART ENDS ======-->
-    <div id="main">
-        <!-- Header Start -->
-        <header class="main-header">
-            <!-- Header Top Start -->
-            <div class="header-top-nav">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!--Left Start-->
-                        <div class="col-lg-4 col-md-4">
-                            <div class="left-text">
-                                <p>Welcome you to Ecolife store!</p>
+        <!--====== PRELOADER PART ENDS ======-->
+        <div id="main">
+            <!-- Header Start -->
+            <header class="main-header">
+                <!-- Header Top Start -->
+                <div class="header-top-nav">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!--Left Start-->
+                            <div class="col-lg-4 col-md-4">
+                                <div class="left-text">
+                                    <p>Welcome you to Ecolife store!</p>
+                                </div>
                             </div>
-                        </div>
-                        <!--Left End-->
-                        <!--Right Start-->
-                        <div class="col-lg-8 col-md-8 text-right">
-                            <div class="header-right-nav">
-                                <ul class="res-xs-flex">
-                                    <li class="after-n">
-                                        <a href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i>Compare (0)</a>
-                                    </li>
-                                    <li>
-                                        <a href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i>Wishlist (0)</a>
-                                    </li>
-                                </ul>
-                                <div class="dropdown-navs">
-                                    <ul>
-                                        <!-- Settings Start -->
-                                        <li class="dropdown xs-after-n">
-                                            <a class="angle-icon" href="#">Settings</a>
-                                            <ul class="dropdown-nav">
-                                                <li><a href="{% url 'myaccount' %}">My Account</a></li>
-                                                <li><a href="{% url 'checkout' %}">Checkout</a></li>
-                                                <li><a href="{% url 'login' %}">Login</a></li>
-                                            </ul>
+                            <!--Left End-->
+                            <!--Right Start-->
+                            <div class="col-lg-8 col-md-8 text-right">
+                                <div class="header-right-nav">
+                                    <ul class="res-xs-flex">
+                                        <li class="after-n">
+                                            <a href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i>Compare (0)</a>
                                         </li>
-                                        <!-- Settings End -->
-                                        <!-- Currency Start -->
-                                        <li class="top-10px first-child">
-                                            <select>
-                                                    <option value="1">USD $</option>
-                                                    <option value="2">EUR €</option>
+                                        
+                                    </ul>
+                                    <div class="dropdown-navs">
+                                        <ul>
+                                            <!-- Settings Start -->
+                                            <li class="dropdown xs-after-n">
+                                                <a class="angle-icon" href="#">Settings</a>
+                                                <ul class="dropdown-nav">
+                                                    <li><a href="{% url 'myaccount' %}">My Account</a></li>
+                                                    <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                                    <li><a href="{% url 'login' %}">Logout</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- Settings End -->
+                                            <!-- Currency Start -->
+                                            <li class="top-10px first-child">
+                                                <select>
+                                                    <option value="1">INR ₹ </option>
+                                                    <option value="2">USD $</option>
+                                                    <option value="3">EUR €</option>
                                                 </select>
-                                        </li>
-                                        <!-- Currency End -->
-                                        <!-- Language Start -->
-                                        <li class="top-10px mr-15px">
-                                            <select>
+                                            </li>
+                                            <!-- Currency End -->
+                                            <!-- Language Start -->
+                                            <li class="top-10px mr-15px">
+                                                <select>
                                                     <option value="1">English</option>
                                                     <option value="2">France</option>
                                                 </select>
-                                        </li>
-                                        <!-- Language End -->
-                                    </ul>
+                                            </li>
+                                            <!-- Language End -->
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+                            <!--Right End-->
                         </div>
-                        <!--Right End-->
                     </div>
                 </div>
-            </div>
-            <!-- Header Top End -->
-            <!-- Header Buttom Start -->
-            <div class="header-navigation sticky-nav">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!-- Logo Start -->
-                        <div class="col-md-2 col-sm-2">
-                            <div class="logo">
-                                <a href="{% url 'index' %}"><img src="assets/images/logo/logo.jpg" alt="" /></a>
+                <!-- Header Top End -->
+                <!-- Header Buttom Start -->
+                <div class="header-navigation sticky-nav">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- Logo Start -->
+                            <div class="col-md-2 col-sm-2">
+                                <div class="logo">
+                                    <a href="{% url 'index' %}"><img src="{% static 'ecommerceapp/images/logo/logo.jpg' %}" alt="" /></a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Logo End -->
-                        <!-- Navigation Start -->
-                        <div class="col-md-10 col-sm-10">
-                            <!--Main Navigation Start -->
-                            <div class="main-navigation mt-0px d-none d-lg-block">
-                                <ul>
-                                    <li class="menu-dropdown">
-                                        <a href="#">Home <i class="ion-ios-arrow-down"></i></a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-dropdown position-static">
-                                                <a href="{% url 'index' %}">Organic </a>
-                                            </li>
-                                            <li class="menu-dropdown position-static">
-                                                <a href="{% url 'index6' %}">Cosmetic </a>
-                                            </li>
-                                            <li class="menu-dropdown position-static">
-                                                <a href="{% url 'index11' %}">Digital</a>
-                                            </li>
-                                            <li class="menu-dropdown position-static">
-                                                <a href="{% url 'index15' %}">Furniture</a>
-                                            </li>
-                                            <li class="menu-dropdown position-static">
-                                                <a href="{% url 'index17' %}">Medical</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-dropdown">
-                                        <a href="shop-left-sidebar.html">Shop</a>
-                                    </li>
-                                    <li class="menu-dropdown">
-                                        <a href="#">Pages <i class="ion-ios-arrow-down"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="{% url 'about' %}">About Page</a></li>
-                                            <li><a href="{% url 'cart' %}">Cart Page</a></li>
-                                            <li><a href="{% url 'checkout' %}">Checkout Page</a></li>
-                                            <li><a href="{% url 'compare' %}">Compare Page</a></li>
-                                            <li><a href="{% url 'login' %}">Login & Register Page</a></li>
-                                            <li><a href="{% url 'myaccount' %}">Account Page</a></li>
-                                            <li><a href="{% url 'wishlist' %}">Wishlist Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-dropdown">
-                                        <a href="{% url 'bloggrid' %}">Blog </a>
-                                    </li>
-                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
-                                </ul>
-                            </div>
-
-
-                            <!--Main Navigation End -->
-                            <!--Header Bottom Account Start -->
-                            <div class="header_account_area">
-                                <!--Seach Area Start -->
-                                <div class="header_account_list search_list">
-                                    <a href="javascript:void(0)"><i class="ion-ios-search-strong"></i></a>
-                                    <div class="dropdown_search">
-                                        <form action="#">
-                                            <input placeholder="Search entire store here ..." type="text" />
-                                            <div class="search-category">
-                                                <select class="bootstrap-select" name="poscats">
+                            <!-- Logo End -->
+                            <!-- Navigation Start -->
+                            <div class="col-md-10 col-sm-10">
+                                <!--Main Navigation Start -->
+                                <div class="main-navigation d-none d-lg-block">
+                                    <ul>
+                                        <li class="menu-dropdown">
+                                            <a href="#">Home <i class="ion-ios-arrow-down"></i></a>
+                                            <ul class="sub-menu">
+                                                <li class="menu-dropdown position-static">
+                                                    <a href="{% url 'index' %}">Organic </a>
+                                    
+                                                </li>
+                                                <li class="menu-dropdown position-static">
+                                                    <a href="{% url 'index6' %}">Cosmetic </a>
+                                                   
+                                                </li>
+                                                <li class="menu-dropdown position-static">
+                                                    <a href="{% url 'index11' %}">Digital</a>
+                                                   
+                                                </li>
+                                                <li class="menu-dropdown position-static">
+                                                    <a href="{% url 'index15' %}">Furniture</a>
+                                                    
+                                                </li>
+                                                <li class="menu-dropdown position-static">
+                                                    <a href="{% url 'index17' %}">Medical</a>
+                                                   
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-dropdown">
+                                            <a href="{% url 'shopleft' %}">Shop</a>
+                                            
+                                        </li>
+                                        <li class="menu-dropdown">
+                                            <a href="#">Pages <i class="ion-ios-arrow-down"></i></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="{% url 'about' %}">About Page</a></li>
+                                                <li><a href="{% url 'cart' %}">Cart Page</a></li>
+                                                <li><a href="{% url 'checkout' %}">Checkout Page</a></li>
+                                                <li><a href="{% url 'compare' %}">Compare Page</a></li>
+                                                <li><a href="{% url 'login' %}">Login & Regiter Page</a></li>
+                                                <li><a href="{% url 'myaccount' %}">Account Page</a></li>
+                                                <li><a href="{% url 'wishlist' %}">Wishlist Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-dropdown">
+                                            <a href="{% url 'bloggrid' %}">Blog</a>
+                                            
+                                        </li>
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                                <!--Main Navigation End -->
+                                <!--Header Bottom Account Start -->
+                                <div class="header_account_area">
+                                    <!--Seach Area Start -->
+                                    <div class="header_account_list search_list">
+                                        <a href="javascript:void(0)"><i class="ion-ios-search-strong"></i></a>
+                                        <div class="dropdown_search">
+                                            <form action="#">
+                                                <input placeholder="Search entire store here ..." type="text" />
+                                                <div class="search-category">
+                                                    <select class="bootstrap-select" name="poscats">
                                                         <option value="0">All categories</option>
                                                         <option value="104">
                                                             Fresh Food
@@ -262,24 +262,24 @@
                                                             - - - - Baking &amp; Cooking
                                                         </option>
                                                     </select>
-                                            </div>
-                                            <button type="submit"><i class="ion-ios-search-strong"></i></button>
-                                        </form>
+                                                </div>
+                                                <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                                            </form>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--Seach Area End -->
-                                <!--Contact info Start -->
-                                <div class="contact-link">
-                                    <div class="phone">
-                                        <p>Call us:</p>
-                                        <a href="tel:(+800)345678">(+800)345678</a>
+                                    <!--Seach Area End -->
+                                    <!--Contact info Start -->
+                                    <div class="contact-link">
+                                        <div class="phone">
+                                            <p>Call us:</p>
+                                            <a href="tel:(+800)345678">(+800)345678</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <!--Contact info End -->
-                                <!--Cart info Start -->
-                                <div class="cart-info d-flex">
-                                    <div class="mini-cart-warp">
-                                        <a href="#" class="count-cart"><span>$20.00</span></a>
+                                    <!--Contact info End -->
+                                    <!--Cart info Start -->
+                                    <div class="cart-info d-flex">
+                                        <div class="mini-cart-warp">
+                                            <a href="#" class="count-cart"><span>$20.00</span></a>
                                         <div class="mini-cart-content">
                                             <ul>
                                                 <li class="single-shopping-cart">
@@ -394,7 +394,7 @@
                                                 <a target="_blank" href="{% url 'singleproduct' %}" class="title">Aquet Doren D 420</a>
                                             </td>
                                             <td class="product-image-title">
-                                                <a target="_blank" href="{% url 'singleproduct' %}" class="image"><img src="assets/images/product-image/electronic/4.jpg" alt="Compare Product" /></a>
+                                                <a target="_blank" href="{% url 'singleproduct' %}" class="image"><img src="{% static 'ecommerceapp/images/product-image/electronic/4.jpg' %}" alt="Compare Product" /></a>
                                                 <a target="_blank" href="{% url 'singleproduct' %}" class="category">Games</a>
                                                 <a target="_blank" href="{% url 'singleproduct' %}" class="title">Game Station X 22</a>
                                             </td>
