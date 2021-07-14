@@ -75,22 +75,22 @@ WSGI_APPLICATION = 'ecommerceproject.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': BASE_DIR / 'db.sqlite3',
-     }
- }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
-#DATABASES = {
- #   'default': {
- #      'ENGINE': 'django.db.backends.mysql',
- #     'NAME': 'ecommerce',
- #    'USER': 'root',
- #   'PASSWORD': '@Yashi1234',
- #       'HOST': 'localhost',
- #      'PORT': '3306',
- #  }
-#}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ecommerce',
+#         'USER': 'root',
+#         'PASSWORD': '@Yashi1234',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation
@@ -124,7 +124,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+LOGOUT_REDIRECT_URL='/login/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -134,6 +134,12 @@ STATICFILES_DIRS=[
 os.path.join(BASE_DIR,'static'),
 ]
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'technocolabstest123@gmail.com'
+EMAIL_HOST_PASSWORD = 'techno@123'
+EMAIL_USE_TLS = True
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

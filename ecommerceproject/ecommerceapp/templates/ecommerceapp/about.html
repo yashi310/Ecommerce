@@ -67,23 +67,30 @@
                             <div class="col-lg-8 col-md-8 text-right">
                                 <div class="header-right-nav">
                                     <ul class="res-xs-flex">
+                                        {% if request.user.is_authenticated %}
                                         <li class="after-n">
-                                            <a href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i>Compare (0)</a>
+                                            <a  target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i>Compare (0)</a>
                                         </li>
                                         <li>
-                                            <a href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i>Wishlist (0)</a>
+                                            <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i>Wishlist (0)</a>
                                         </li>
+                                        {% endif %}
                                     </ul>
                                     <div class="dropdown-navs">
                                         <ul>
                                             <!-- Settings Start -->
                                             <li class="dropdown xs-after-n">
-                                                <a class="angle-icon" href="#">Settings</a>
+                                              {% if request.user.is_authenticated %}
+                                                <a class="angle-icon" href="#">{{user.first_name}}</a>
                                                 <ul class="dropdown-nav">
-                                                    <li><a href="{% url 'myaccount' %}">My Account</a></li>
-                                                    <li><a href="{% url 'checkout' %}">Checkout</a></li>
-                                                    <li><a href="{% url 'login' %}">Login</a></li>
+                                                    <li><a target="_blank" href="{% url 'myaccount' %}">My Account</a></li>
+                                                    <li><a target="_blank" href="{% url 'checkout' %}">Checkout</a></li>
+                                                    <li><a target="_blank" href="{% url 'logout' %}">Logout</a></li>
                                                 </ul>
+                                            {% else %}
+                                             <a  href="{% url 'login' %}">Login</a>
+                                                
+                                            {% endif %}
                                             </li>
                                             <!-- Settings End -->
                                             <!-- Currency Start -->
@@ -152,15 +159,23 @@
                                             </li>
                                             <li class="menu-dropdown">
                                                 <a href="#">Pages <i class="ion-ios-arrow-down"></i></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="{% url 'about' %}">About Page</a></li>
-                                                    <li><a href="{% url 'cart' %}">Cart Page</a></li>
-                                                    <li><a href="{% url 'checkout' %}">Checkout Page</a></li>
-                                                    <li><a href="{% url 'compare' %}">Compare Page</a></li>
-                                                    <li><a href="{% url 'login' %}">Login & Regiter Page</a></li>
-                                                    <li><a href="{% url 'myaccount' %}">Account Page</a></li>
-                                                    <li><a href="{% url 'wishlist' %}">Wishlist Page</a></li>
-                                                </ul>
+                                                {% if request.user.is_authenticated %}
+                                            <ul class="sub-menu">
+                                                <li><a href="{% url 'about' %}">About</a></li>
+                                                <li><a href="{% url 'cart' %}">Cart</a></li>
+                                                <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                                <li><a href="{% url 'compare' %}">Compare</a></li>
+                                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                                <li><a href="{% url 'myaccount' %}">Account</a></li>
+                                                <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                            </ul>
+                                            {% else %}
+                                             <ul class="sub-menu">
+                                                <li><a href="{% url 'about' %}">About</a></li>
+                                                <li><a href="{% url 'login' %}">Login & Register</a></li>
+                                                
+                                            </ul>
+                                            {% endif %}
                                             </li>
                                             <li class="menu-dropdown">
                                                 <a href="{% url 'bloggrid' %}">Blog </a>
@@ -271,6 +286,7 @@
                                     </div>
                                     <!--Contact info End -->
                                     <!--Cart info Start -->
+                                    {% if request.user.is_authenticated %}
                                     <div class="cart-info d-flex">
                                         <div class="mini-cart-warp">
                                             <a href="#" class="count-cart"><span>$20.00</span></a>
@@ -278,11 +294,11 @@
                                                 <ul>
                                                     <li class="single-shopping-cart">
                                                         <div class="shopping-cart-img">
-                                                            <a href="{% url 'singleproduct' %}"><img alt="" src="{%static 'ecommerceapp/images/product-image/mini-cart/1.jpg' %}" /></a>
+                                                            <a target="_blank" href="{% url 'singleproduct' %}"><img alt="" src="{% static 'ecommerceapp/images/product-image/mini-cart/1.jpg' %}" /></a>
                                                             <span class="product-quantity">1x</span>
                                                         </div>
                                                         <div class="shopping-cart-title">
-                                                            <h4><a href="{% url 'singleproduct' %}">Juicy Couture...</a></h4>
+                                                            <h4><a target="_blank" href="{% url 'singleproduct' %}">Juicy Couture...</a></h4>
                                                             <span>$9.00</span>
                                                             <div class="shopping-cart-delete">
                                                                 <a href="#"><i class="ion-android-cancel"></i></a>
@@ -291,11 +307,11 @@
                                                     </li>
                                                     <li class="single-shopping-cart">
                                                         <div class="shopping-cart-img">
-                                                            <a href="{% url 'singleproduct' %}"><img alt="" src="{%static 'ecommerceapp/images/product-image/mini-cart/2.jpg' %}" /></a>
+                                                            <a target="_blank" href="{% url 'singleproduct' %}"><img alt="" src="{% static 'ecommerceapp/images/product-image/mini-cart/2.jpg' %}" /></a>
                                                             <span class="product-quantity">1x</span>
                                                         </div>
                                                         <div class="shopping-cart-title">
-                                                            <h4><a href="{% url 'singleproduct' %}">Water and Wind...</a></h4>
+                                                            <h4><a target="_blank" href="{% url 'singleproduct' %}">Water and Wind...</a></h4>
                                                             <span>$11.00</span>
                                                             <div class="shopping-cart-delete">
                                                                 <a href="#"><i class="ion-android-cancel"></i></a>
@@ -310,11 +326,12 @@
                                                     <h4 class="shop-total">Total : <span>$27.00</span></h4>
                                                 </div>
                                                 <div class="shopping-cart-btn text-center">
-                                                    <a class="default-btn" href="{% url 'checkout' %}">checkout</a>
+                                                    <a target="_blank" class="default-btn" href="{% url 'checkout' %}">checkout</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    {% endif %}
                                     <!--Cart info End -->
                                 </div>
                             </div>
@@ -349,15 +366,23 @@
                                         </li>
                                         <li>
                                             <a href="#">Pages</a>
+                                            {% if request.user.is_authenticated %}
                                             <ul>
-                                                <li><a href="{% url 'about' %}">About Page</a></li>
-                                                <li><a href="{% url 'cart' %}">Cart Page</a></li>
-                                                <li><a href="{% url 'checkout' %}">Checkout Page</a></li>
-                                                <li><a href="{% url 'compare' %}">Compare Page</a></li>
-                                                <li><a href="{% url 'login' %}">Login & Regiter Page</a></li>
-                                                <li><a href="{% url 'myaccount' %}">Account Page</a></li>
-                                                <li><a href="{% url 'wishlist' %}">Wishlist Page</a></li>
+                                                <li><a target="_blank" href="{% url 'about' %}">About</a></li>
+                                                <li><a target="_blank" href="{% url 'cart' %}">Cart </a></li>
+                                                <li><a target="_blank" href="{% url 'checkout' %}">Checkout</a></li>
+                                                <li><a target="_blank" href="{% url 'compare' %}">Compare Page</a></li>
+                                                <li><a target="_blank" href="{% url 'login' %}">Login & Register</a></li>
+                                                <li><a target="_blank" href="{% url 'myaccount' %}">Account </a></li>
+                                                <li><a target="_blank" href="{% url 'wishlist' %}">Wishlist</a></li>
                                             </ul>
+                                            {% else %}
+                                            <ul>
+                                                <li><a target="_blank" href="{% url 'about' %}">About</a></li>
+                                                <li><a target="_blank" href="{% url 'login' %}">Login & Register</a></li>
+                                                
+                                            </ul>
+                                            {% endif %}
                                         </li>
                                         <li>
                                             <a href="{% url 'bloggrid' %}">Blog</a>

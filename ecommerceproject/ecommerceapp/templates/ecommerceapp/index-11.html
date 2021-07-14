@@ -1,5 +1,5 @@
 
-                <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     
 <!-- Mirrored from htmldemo.hasthemes.com/ecolife-preview/ecolife/index-11.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Jun 2021 16:23:17 GMT -->
@@ -71,12 +71,21 @@
                                         <ul>
                                             <!-- Settings Start -->
                                             <li class="dropdown after-n xs-after-n">
-                                                <a class="angle-icon" href="#">Settings</a>
+                                               {% if request.user.is_authenticated %}
+                                                <a class="angle-icon" href="#">{{user.first_name}}</a>
                                                 <ul class="dropdown-nav">
-                                                    <li><a href="my-account.html">My Account</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    <li><a href="login.html">Login</a></li>
+                                                    <li><a target="_blank" href="{% url 'myaccount' %}">My Account</a></li>
+                                                    <li><a target="_blank" href="{% url 'checkout' %}">Checkout</a></li>
+                                                    <li><a target="_blank" href="{% url 'logout' %}">Logout</a></li>
                                                 </ul>
+                                            {% else %}
+                                             <a class="angle-icon" href="#">settings</a>
+                                                <ul class="dropdown-nav">
+                                                    <li><a target="_blank" href="{% url 'myaccount' %}">My Account</a></li>
+                                                    <li><a target="_blank" href="{% url 'checkout' %}">Checkout</a></li>
+                                                    <li><a target="_blank" href="{% url 'login' %}">Login</a></li>
+                                                </ul>
+                                            {% endif %}
                                             </li>
                                             <!-- Settings End -->
                                             <!-- Currency Start -->
