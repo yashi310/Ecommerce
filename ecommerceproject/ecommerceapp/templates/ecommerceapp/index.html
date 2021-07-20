@@ -1,3 +1,5 @@
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -494,13 +496,15 @@
                     </div>
                     <!-- Section Title End -->
                     <!-- Best Sell Slider Carousel Start -->
+                    
                     <div class="best-sell-slider owl-carousel owl-nav-style">
                         <!-- Single Item -->
+{% for i in data %}
                         <article class="list-product">
                             <div class="img-block">
                                 <a target="_blank" href="{% url 'singleproduct' %}"class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
+                                    <img class="first-img" src="{{i.5}}" alt="" />
+                                   
                                 </a>
                                 <div class="quick-view">
                                     <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
@@ -513,7 +517,7 @@
                             </ul>
                             <div class="product-decs">
                                 <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Juicy Quilted Ter..</a></h2>
+                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">{{i.1}}</a></h2>
                                 <div class="rating-product">
                                     <i class="ion-android-star"></i>
                                     <i class="ion-android-star"></i>
@@ -523,8 +527,8 @@
                                 </div>
                                 <div class="pricing-meta">
                                     <ul>
-                                        <li class="old-price">€18.90</li>
-                                        <li class="current-price">€34.21</li>
+                                        <li class="old-price">₹ {{i.6}}</li>
+                                        <li class="current-price">₹ {{i.6}}</li>
                                         <li class="discount-price">-5%</li>
                                     </ul>
                                 </div>
@@ -542,499 +546,11 @@
                             </div>
                         </article>
                         <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-2.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-15.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a href="{% url 'singleproduct' %}" class="product-link">New Balance Fresh Foam Ka..</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price">€18.90</li>
-                                        <li class="current-price">€15.12</li>
-                                        <li class="discount-price">-20%</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
+                        
                         <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-3.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-4.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNER</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Brixton Patrol All Terrain Ano..</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€18.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-5.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-5.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNER</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Tricot Logo Strip..</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€18.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-6.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-6.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">New Balance Arishi Sport v1</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€18.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-7.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-8.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNAR</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Fila Locker Room Varsity Jacket</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€18.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-9.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-9.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Water and Wind Resistant Ins..</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€18.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-10.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-10.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">New Luxury Men's Slim Fit Shi...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€29.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-11.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-12.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Originals Kaval Windbreaker...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price">€23.90</li>
-                                        <li class="current-price">€21.51</li>
-                                        <li class="discount-price">-10%</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-13.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-3.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Brixton Patrol All Terrain Anor...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€18.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Madden by Steve Madden Cale 6</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price">€11.90</li>
-                                        <li class="current-price">€10.12</li>
-                                        <li class="discount-price">-15%</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-15.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-2.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Juicy Quilted Ter..</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price">€35.90</li>
-                                        <li class="current-price">€34.11</li>
-                                        <li class="discount-price">-5%</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
+                        {% endfor %}
                     </div>
+
                     <!-- Best Sells Carousel End -->
                 </div>
             </section>
@@ -1188,7 +704,7 @@
             <section class="hot-deal-area">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4">
+                        <div class="col-xs-4 col-sm-4 col-md-5 col-lg-5 col-xl-3">
                             <div class="row">
                                 <div class="col-md-12">
                                     <!-- Section Title -->
@@ -1202,11 +718,13 @@
                             <!-- Hot Deal Slider Start -->
                             <div class="hot-deal owl-carousel owl-nav-style">
                                 <!--  Single item -->
+                                {% for i in data %}
                                 <article class="list-product">
+
                                     <div class="img-block">
                                         <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                            <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-16.jpg' %}" alt="" />
-                                            <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-16.jpg' %}" alt="" />
+                                            <img class="first-img" src="{{i.5}}" alt="" />
+                                            
                                         </a>
                                         <div class="quick-view">
                                             <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
@@ -1219,7 +737,7 @@
                                     </ul>
                                     <div class="product-decs">
                                         <a target="_blank" class="inner-link" href="{% url 'shopleft' %}"><span>STUDIO DESIGN</span></a>
-                                        <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Originals Kaval Windbreaker Winter Jacket 2</a></h2>
+                                        <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">{{i.1}}</a></h2>
                                         <div class="rating-product">
                                             <i class="ion-android-star"></i>
                                             <i class="ion-android-star"></i>
@@ -1229,8 +747,8 @@
                                         </div>
                                         <div class="pricing-meta">
                                             <ul>
-                                                <li class="old-price">€18.90</li>
-                                                <li class="current-price">€34.21</li>
+                                                <li class="old-price">₹ {{i.6}}</li>
+                                                <li class="current-price">₹ {{i.6}}</li>
                                                 <li class="discount-price">-5%</li>
                                             </ul>
                                         </div>
@@ -1253,168 +771,13 @@
                                         <div data-countdown="2021/03/01"></div>
                                     </div>
                                 </article>
-                                <!--  Single item -->
-                                <article class="list-product">
-                                    <div class="img-block">
-                                        <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                            <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-11.jpg' %}" alt="" />
-                                            <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-12.jpg' %}" alt="" />
-                                        </a>
-                                        <div class="quick-view">
-                                            <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                <i class="ion-ios-search-strong"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <ul class="product-flag">
-                                        <li class="new">New</li>
-                                    </ul>
-                                    <div class="product-decs">
-                                        <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                        <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Originals Kaval Windbreaker Winter Jacket</a></h2>
-                                        <div class="rating-product">
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                        </div>
-                                        <div class="pricing-meta">
-                                            <ul>
-                                                <li class="old-price">€18.90</li>
-                                                <li class="current-price">€34.21</li>
-                                                <li class="discount-price">-5%</li>
-                                            </ul>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="in-stock">Availability: <span>300 In Stock</span></div>
-
-                                    <div class="clockdiv">
-                                        <div class="title_countdown">Hurry Up! Offers ends in:</div>
-                                        <div data-countdown="2021/03/01"></div>
-                                    </div>
-                                </article>
-                                <!--  Single item -->
-                                <article class="list-product">
-                                    <div class="img-block">
-                                        <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                            <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-15.jpg' %}" alt="" />
-                                            <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-2.jpg' %}" alt="" />
-                                        </a>
-                                        <div class="quick-view">
-                                            <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                <i class="ion-ios-search-strong"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <ul class="product-flag">
-                                        <li class="new">New</li>
-                                    </ul>
-                                    <div class="product-decs">
-                                        <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                        <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">New Balance Fresh Foam Kaymin</a></h2>
-                                        <div class="rating-product">
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                        </div>
-                                        <div class="pricing-meta">
-                                            <ul>
-                                                <li class="old-price">€18.90</li>
-                                                <li class="current-price">€34.21</li>
-                                                <li class="discount-price">-5%</li>
-                                            </ul>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="in-stock">Availability: <span>299 In Stock</span></div>
-
-                                    <div class="clockdiv">
-                                        <div class="title_countdown">Hurry Up! Offers ends in:</div>
-                                        <div data-countdown="2021/03/01"></div>
-                                    </div>
-                                </article>
-                                <!--  Single item -->
-                                <article class="list-product">
-                                    <div class="img-block">
-                                        <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                            <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                            <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                        </a>
-                                        <div class="quick-view">
-                                            <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                <i class="ion-ios-search-strong"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <ul class="product-flag">
-                                        <li class="new">New</li>
-                                    </ul>
-                                    <div class="product-decs">
-                                        <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                        <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Madden by Steve Madden Cale 6</a></h2>
-                                        <div class="rating-product">
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                            <i class="ion-android-star"></i>
-                                        </div>
-                                        <div class="pricing-meta">
-                                            <ul>
-                                                <li class="old-price">€18.90</li>
-                                                <li class="current-price">€34.21</li>
-                                                <li class="discount-price">-5%</li>
-                                            </ul>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="in-stock">Availability: <span>299 In Stock</span></div>
-
-                                    <div class="clockdiv">
-                                        <div class="title_countdown">Hurry Up! Offers ends in:</div>
-                                        <div data-countdown="2021/03/01"></div>
-                                    </div>
-                                </article>
+                                {% endfor %}
                                 <!--  Single item -->
                             </div>
                             <!-- Hot Deal Slider End -->
                         </div>
                         <!-- New Arrivals Area Start -->
-                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-8">
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-8">
                             <div class="row">
                                 <div class="col-md-12">
                                     <!-- Section Title -->
@@ -1428,12 +791,19 @@
                             <!-- New Product Slider Start -->
                             <div class="new-product-slider owl-carousel owl-nav-style">
                                 <!-- Product Single Item -->
+                            
+                               {% for i in data %}
+
+                               
+
                                 <div class="product-inner-item">
+                                    
+
                                     <article class="list-product mb-30px">
                                         <div class="img-block">
                                             <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-16.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-16.jpg' %}" alt="" />
+                                                <img class="first-img" src="{{i.5}}" alt="" />
+                                                
                                             </a>
                                             <div class="quick-view">
                                                 <a target="_blank" class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
@@ -1446,7 +816,7 @@
                                         </ul>
                                         <div class="product-decs">
                                             <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Originals Kaval Windbr...</a></h2>
+                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">{{i.1}}</a></h2>
                                             <div class="rating-product">
                                                 <i class="ion-android-star"></i>
                                                 <i class="ion-android-star"></i>
@@ -1456,8 +826,8 @@
                                             </div>
                                             <div class="pricing-meta">
                                                 <ul>
-                                                    <li class="old-price">€23.90</li>
-                                                    <li class="current-price">€21.51</li>
+                                                    <li class="old-price">₹ {{i.6}}</li>
+                                                    <li class="current-price">₹ {{i.6}}</li>
                                                     <li class="discount-price">-10%</li>
                                                 </ul>
                                             </div>
@@ -1473,505 +843,13 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </article>
-                                    <article class="list-product">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-15.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-2.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Juicy Quil...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price">€35.90</li>
-                                                    <li class="current-price">€34.11</li>
-                                                    <li class="discount-price">-5%</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
+                                    </article>                   
                                 </div>
+                            
+                                {% endfor %}
+                                
                                 <!-- Product Single Item -->
-                                <div class="product-inner-item">
-                                    <article class="list-product mb-30px">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-4.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-13.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNER</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Brixton Patrol All Terr...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price not-cut">€29.90</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                    <article class="list-product">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-10.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-10.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">New Luxury Men's Slim...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price not-cut">€29.90</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </div>
-                                <!-- Product Single Item -->
-                                <div class="product-inner-item">
-                                    <article class="list-product mb-30px">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-11.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-12.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Originals Kaval Windbr...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price">€35.90</li>
-                                                    <li class="current-price">€34.11</li>
-                                                    <li class="discount-price">-5%</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                    <article class="list-product">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Juicy Quil...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price">€35.90</li>
-                                                    <li class="current-price">€34.11</li>
-                                                    <li class="discount-price">-5%</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </div>
-                                <!-- Product Single Item -->
-                                <div class="product-inner-item">
-                                    <article class="list-product mb-30px">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Madden by Steve Madd...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price">€11.90</li>
-                                                    <li class="current-price">€10.12</li>
-                                                    <li class="discount-price">-15%</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                    <article class="list-product">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-17.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-16.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Trans-Weight Hooded...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price not-cut">€19.90</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </div>
-                                <!-- Product Single Item -->
-                                <div class="product-inner-item">
-                                    <article class="list-product mb-30px">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-9.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-9.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Water and Wind Resist...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price not-cut">€11.90</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                    <article class="list-product">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-2.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-15.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">New Balance Fresh Foa...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price">€18.90</li>
-                                                    <li class="current-price">€15.11</li>
-                                                    <li class="discount-price">-20%</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </div>
-                                <!-- Product Single Item -->
-                                <div class="product-inner-item">
-                                    <article class="list-product mb-30px">
-                                        <div class="img-block">
-                                            <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-18.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-18.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Solid Slee...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price not-cut">€18.90</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                    <article class="list-product">
-                                        <div class="img-block">
-                                            <a href="{% url 'singleproduct' %}" class="thumbnail">
-                                                <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-19.jpg' %}" alt="" />
-                                                <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-20.jpg' %}" alt="" />
-                                            </a>
-                                            <div class="quick-view">
-                                                <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                                    <i class="ion-ios-search-strong"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <ul class="product-flag">
-                                            <li class="new">New</li>
-                                        </ul>
-                                        <div class="product-decs">
-                                            <a class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                            <h2><a href="{% url 'singleproduct' %}" class="product-link">New Balance Fresh Foa...</a></h2>
-                                            <div class="rating-product">
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                                <i class="ion-android-star"></i>
-                                            </div>
-                                            <div class="pricing-meta">
-                                                <ul>
-                                                    <li class="old-price not-cut">€18.90</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="add-to-link">
-                                            <ul>
-                                                <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                                <li>
-                                                    <a href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
+                                
                                 </div>
                             </div>
                             <!-- Product Slider End -->
@@ -2004,6 +882,7 @@
             </div>
             <!-- Banner Area End -->
             <!-- Feature Area Start -->
+            
             <section class="feature-area">
                 <div class="container">
                     <div class="row">
@@ -2017,14 +896,18 @@
                         </div>
                     </div>
                     <!-- Feature Slider Start -->
+                     
                     <div class="feature-slider owl-carousel owl-nav-style">
                         <!-- Single Item -->
+                        {% for i in data %}
+                    
                         <div class="feature-slider-item">
+                           
                             <article class="list-product">
                                 <div class="img-block">
                                     <a href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-18.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-18.jpg' %}" alt="" />
+                                        <img class="first-img" src="{{i.5}}" alt="" />
+                                       
                                     </a>
                                     <div class="quick-view">
                                         <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
@@ -2034,7 +917,7 @@
                                 </div>
                                 <div class="product-decs">
                                     <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Solid...</a></h2>
+                                    <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">{{i.1}}</a></h2>
                                     <div class="rating-product">
                                         <i class="ion-android-star"></i>
                                         <i class="ion-android-star"></i>
@@ -2044,507 +927,17 @@
                                     </div>
                                     <div class="pricing-meta">
                                         <ul>
-                                            <li class="old-price not-cut">€29.90</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-19.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-20.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">New Balance Fresh...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price not-cut">€29.90</li>
+                                            <li class="old-price not-cut">₹ {{i.6}}</li>
                                         </ul>
                                     </div>
                                 </div>
                             </article>
                         </div>
+                        {% endfor %}
+                        
                         <!-- Single Item -->
-                        <div class="feature-slider-item">
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-16.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-17.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a href="{% url 'singleproduct' %}" class="product-link">Originals Kaval Win...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price">€23.90</li>
-                                            <li class="current-price">€21.51</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-11.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-12.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Originals Kaval Win...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price">€23.90</li>
-                                            <li class="current-price">€21.51</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="feature-slider-item">
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a  target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-2.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-15.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Juicy...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price">€35.90</li>
-                                            <li class="current-price">€34.11</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Juicy...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price">€35.90</li>
-                                            <li class="current-price">€34.11</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="feature-slider-item">
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-2.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-23.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a href="{% url 'singleproduct' %}" class="product-link">New Balance Fresh...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price">€18.90</li>
-                                            <li class="current-price">€15.12</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-18.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-18.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">New Balance Fresh...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price not-cut">€29.90</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="feature-slider-item">
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-5.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-5.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNER</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Trico...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price not-cut">€9.90</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-7.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-8.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNER</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Fila Locker Room V...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price not-cut">€9.90</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="feature-slider-item">
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-17.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-16.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Trans-Weight Hood...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price">€18.90</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-10.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">New Luxury Men's...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price">€11.90</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="feature-slider-item">
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-22.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-15.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNER</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Calvin Klein Jeans...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price not-cut">€29.90</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a  target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-9.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-9.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Water and Wind R...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price not-cut">€11.90</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="feature-slider-item">
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a  target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPIC CORNER</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Madden by Steve...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price">€11.90</li>
-                                            <li class="current-price">€10.12</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a  target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-4.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-3.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Brixton Patrol All T...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price not-cut">€18.90</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- Single Item -->
-                        <div class="feature-slider-item">
-                            <article class="list-product">
-                                <div class="img-block">
-                                    <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                        <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                        <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                    </a>
-                                    <div class="quick-view">
-                                        <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                            <i class="ion-ios-search-strong"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-decs">
-                                    <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                    <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Juicy...</a></h2>
-                                    <div class="rating-product">
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                        <i class="ion-android-star"></i>
-                                    </div>
-                                    <div class="pricing-meta">
-                                        <ul>
-                                            <li class="old-price">€18.90</li>
-                                            <li class="current-price">€34.21</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
+                        
+                        
                         <!-- Single Item -->
                     </div>
                     <!-- Feature Slider End -->
@@ -2580,11 +973,12 @@
                     <!-- Recent Product slider Start -->
                     <div class="recent-product-slider owl-carousel owl-nav-style">
                         <!-- Single Item -->
+                        {% for i in data %}
                         <article class="list-product">
                             <div class="img-block">
                                 <a  target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-11.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-12.jpg' %}" alt="" />
+                                    <img class="first-img" src="{{i.5}}" alt="" />
+                                   
                                 </a>
                                 <div class="quick-view">
                                     <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
@@ -2597,7 +991,7 @@
                             </ul>
                             <div class="product-decs">
                                 <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">Originals Kaval Windbr...</a></h2>
+                                <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">{{i.1}}</a></h2>
                                 <div class="rating-product">
                                     <i class="ion-android-star"></i>
                                     <i class="ion-android-star"></i>
@@ -2607,8 +1001,8 @@
                                 </div>
                                 <div class="pricing-meta">
                                     <ul>
-                                        <li class="old-price">€23.90</li>
-                                        <li class="current-price">€21.51</li>
+                                        <li class="old-price">₹ {{i.6}}</li>
+                                        <li class="current-price">₹ {{i.6}}</li>
                                         <li class="discount-price">-10%</li>
                                     </ul>
                                 </div>
@@ -2626,317 +1020,7 @@
                             </div>
                         </article>
                         <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a  target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-1.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Juicy Couture Juicy Quil...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price">€35.90</li>
-                                        <li class="current-price">€34.21</li>
-                                        <li class="discount-price">-5%</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a  target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a  target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-3.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-4.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNER</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Brixton Patrol All Terrai...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€29.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a  target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a  target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a  target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-6.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-6.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNER</span></a>
-                                <h2><a  target="_blank" href="{% url 'singleproduct' %}" class="product-link">New Balance Arishi Spo...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€29.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a  target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a  target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-22.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-15.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a  target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>GRAPHIC CORNER</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Calvin Klein Jeans Refle...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€29.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-14.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Madden by Steve Madd...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price">€12.90</li>
-                                        <li class="current-price">€10.21</li>
-                                        <li class="discount-price">-10%</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-17.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-16.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Trans-Weight Hooded...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€11.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-                        <!-- Single Item -->
-                        <article class="list-product">
-                            <div class="img-block">
-                                <a target="_blank" href="{% url 'singleproduct' %}" class="thumbnail">
-                                    <img class="first-img" src="{% static 'ecommerceapp/images/product-image/organic/product-9.jpg' %}" alt="" />
-                                    <img class="second-img" src="{% static 'ecommerceapp/images/product-image/organic/product-9.jpg' %}" alt="" />
-                                </a>
-                                <div class="quick-view">
-                                    <a class="quick_view" href="#" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
-                                        <i class="ion-ios-search-strong"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <ul class="product-flag">
-                                <li class="new">New</li>
-                            </ul>
-                            <div class="product-decs">
-                                <a target="_blank" class="inner-link" href="{% url 'singleproduct' %}"><span>STUDIO DESIGN</span></a>
-                                <h2><a target="_blank" href="{% url 'singleproduct' %}" class="product-link">Water and Wind Resist...</a></h2>
-                                <div class="rating-product">
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                    <i class="ion-android-star"></i>
-                                </div>
-                                <div class="pricing-meta">
-                                    <ul>
-                                        <li class="old-price not-cut">€11.90</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="add-to-link">
-                                <ul>
-                                    <li class="cart"><a class="cart-btn" href="#">ADD TO CART </a></li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'wishlist' %}"><i class="ion-android-favorite-outline"></i></a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="{% url 'compare' %}"><i class="ion-ios-shuffle-strong"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
+                        {% endfor %}
                         <!-- Single Item -->
                     </div>
                     <!-- Recent product slider end -->
@@ -3245,3 +1329,4 @@
 
 <!-- Mirrored from htmldemo.hasthemes.com/ecolife-preview/ecolife/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 06 Jun 2021 16:16:30 GMT -->
 </html>
+
